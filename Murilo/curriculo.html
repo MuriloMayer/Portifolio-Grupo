@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculo</title>
     <link rel="stylesheet" href="curriculo.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
-    <header>
+
+    <header class="nav-down">
         <div class="nome">
             <h1>Murilo Mayer</h1>
             <p>Information Systems Student</p>
         </div>
         <nav>
-            <a href="#">About-Me</a>
-            <a href="#">Resumo Profissional</a>
-            <a href="#">Projetos</a>
+            <a id="b" href="#">Resumo Profissional</a>
+            <a id="b" href="#">Projetos</a>
         </nav>
     </header>
 
@@ -27,56 +28,121 @@
 
         <span>
             <span class="sobre">
-                <h2>ABOUT-ME</h2>
-                <p>
-                    Desde sempre estive envolvido com tecnologia e informática, tendo adquirido experiência de trabalho em escritório e, neste ano, iniciado meu curso em Sistemas da Informação, buscando ampliar meus conhecimentos para atuar em diversas áreas, como desenvolvimento de sistemas front-end e back-end, entre outras. Além de ter habilidades técnicas, acredito que minhas habilidades interpessoais, tais como comunicação clara e efetiva, trabalho em equipe e adaptabilidade, são características fundamentais que me permitem trabalhar com sucesso em ambientes de equipe colaborativos. Tenho um forte interesse em atuar na área de desenvolvimento, mas também estou aberto a explorar outras áreas relacionadas à tecnologia, onde possa aplicar minhas habilidades e crescer profissionalmente.
+                <h2 id="h2">ABOUT-ME</h2>
+                <p id="p">
+                    » Desde sempre estive envolvido com tecnologia e informática, tendo adquirido experiência de trabalho em escritório.
+                    <br>
+                    <br>» Neste ano, iniciado meu curso em Sistemas da Informação, buscando ampliar meus conhecimentos para atuar em diversas áreas, como desenvolvimento de sistemas front-end e back-end, entre outras. 
+                    <br>
+                    <br>» Além de ter habilidades técnicas, acredito que minhas habilidades interpessoais, tais como comunicação clara e efetiva, trabalho em equipe e adaptabilidade, são características fundamentais que me permitem trabalhar com sucesso em ambientes de equipe colaborativos. 
+                    <br>
+                    <br>» Tenho um grande interesse em atuar na área de desenvolvimento, mas também estou aberto a explorar outras áreas relacionadas à tecnologia, onde possa aplicar minhas habilidades e crescer profissionalmente.
                 </p>
             </span>
 
-
+            <hr>
 
             <span class="skillssoft">
                 <h3>Soft Skills</h3>
-                <ul class="soft">
-                    <li>Focado </li>
-                    <li>Criativo</li>
-                    <li>Aprendizado Rapido</li>
-                    <li>Procurando Oportunidades</li>
+                    <p id="skill">
+                         Focado |
+                        Criativo |
+                        Aprendizado Rapido |
+                        Procurando Oportunidades 
+                    </p>
                 </ul>
             </span>
+            <hr>
+
             <span class="skillshard">
                 <h3>Hard Skills</h3>
                 <ul>
-                    <li>Logica De Programaçao</li>
-                    <li>Git E Git-Hub</li>
-                    <li>Scrum</li>
-                    <li>VsCode</li>
-                    <li>Pacote Office</li>
-                    <li>Photoshop</li>
+                    <p id="skill">
+                        Logica De Programaçao |
+                        Git E Git-Hub |
+                        Scrum |
+                        VsCode |
+                        Pacote Office |
+                        Photoshop
+                    </p>
 
                 </ul>
             </span>
-
+            <hr>
 
             <span class="linguagens">
             <h3>Linguagens</h3>
             <picture>
-                <img id="html" src="" alt="htmllogo">
-                <img id="css" src="" alt="csslogo">
-                <img id="python" src="" alt="pythonlogo">
+                <img id="html" src="../Fotos/html.png" alt="htmllogo">
+                <img id="css" src="../Fotos/css.png" alt="csslogo">
+                <img src="../Fotos/js.png" alt="jslogo">
+                <br>
+                <img id="python" src="../Fotos/python.png" alt="pythonlogo">
             </picture>
             </span>
+            <hr>
+            <span id="dados">
+                <h3>Meus Cursos</h3>
+                <h4>Formação Academica</h4>
 
-
-
-
-
-
-
+                <p>Bacharelado Em Sistemas De Informação | Puc-PR <br>2023 - Em Curso</p>
+                
+                <h4>Cursos E Certificações</h4>
+                <a target="_blank" href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-MuriloMayer-976276.pdf">Scrum Fundamentals Certified | SCRUMStudy</a>
+                <a target="_blank" href="https://learn.microsoft.com/pt-br/training/achievements/learn.student-evangelism.intro-to-vc-git.trophy?username=MuriloMayerVanNouhuys-5375&sharingId=AEDD7AD9EF8753EF">Introdução ao controle de versão com o Git | Microsoft Learn</a>
+                <a target="_blank" href="https://learn.microsoft.com/pt-br/training/achievements/learn.github-administration-products.trophy?username=MuriloMayerVanNouhuys-5375&sharingId=AEDD7AD9EF8753EF">Conceitos básicos do GitHub | Microsoft Learn </a>
+                <br>
+                <br>
+            </span>
 
         </span>
 
     </main>
+
+    <footer>
+        <p>Designed By Murilo Mayer</p>
+    </footer>
+
+    
+    <script>
+    var didScroll;
+    var lastScrollTop = 1;
+    var delta = 1;
+    var navbarHeight = $('header').outerHeight();
+
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+        
+
+        
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            $('header').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            if(st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+        
+        lastScrollTop = st;
+    }   
+    </script>
+
+
 
 
 
