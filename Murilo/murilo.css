@@ -53,7 +53,7 @@
     top: -50%;
     left: 0;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-    animation: drop 7s 0s infinite;
+    animation: drop 5s 2s infinite;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
   }
@@ -63,7 +63,7 @@
   }
   
   .line:nth-child(1)::after {
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
   
   .line:nth-child(3) {
@@ -71,7 +71,7 @@
   }
   
   .line:nth-child(3)::after {
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
   }
   
   @keyframes drop {
@@ -83,10 +83,6 @@
     }
   }
   
-
-
-
-
 
 
 
@@ -140,10 +136,19 @@ a {
 }
 
 a:hover {
-  transition-duration: 1s;
-  background-color: rgba(255, 255, 255, 0.149)
+  animation-name: bot;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+
 }
 
+
+
+
+@keyframes bot{
+  from {background-color: black;}
+  to {background-color: white;color: black;text-decoration: underline;;}
+}
 
 
 

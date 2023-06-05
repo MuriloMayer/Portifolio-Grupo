@@ -67,6 +67,7 @@ nav {
     align-items: center;
     font-weight: normal;
     justify-content: center;
+    text-decoration: none;
 }
 #b:hover {
  transition-duration: 1s;
