@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="portifolio.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <header class="nav-down">
+        <div class="nome">
+            <a id="home" href="pgMuriloMayer.html">
+                <h1>Murilo Mayer</h1>
+                <p id="j">Information Systems Student</p>
+            </a>
+        </div>
+        <nav>
+                <a id="b" href="../Profile.pdf" target="_blank">Resumo Profissional</a>
+                <a id="b" href="curriculo.html">Curriculo</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="top">
+            <h1>
+                Projetos
+            </h1>
+            <p>Meus Principais Projetos</p>
+        </div>
+
+        <div class="box">
+            <nav><a id="git" href="https://github.com/MuriloMayer/MaquinaDeRefrigeranteRA" target="_blank">Maquina De Refrigerantes</a></nav>
+            <p>A Maquina de refrigerantes foi o primeiro projeto grande, feito inteiramente em Python, como projeto formativo da disciplina de Raciocínio Algorítmico</p>
+            <h3>Linguagens Utilizadas:</h3>
+            <img src="../Fotos/python.png" alt="python">
+        </div>
+
+        <div class="box">
+            <nav><a id="git" href="https://github.com/MuriloMayer/Dev2Player" target="_blank">Dev 2 Player</a></nav>
+            <p>O Dev 2 Player é um projeto da disciplina de experiência criativa, no qual desenvolvemos um site para jogadores e desenvolvoderes de jogos poderem se comunicar e efetuar/receber avaliaçoes, este projeto foi feito utilizandoHTML:5, CSS:3 E JavaScript</p>
+            <h3>Linguagens Utilizadas:</h3>
+            <img src="../Fotos/html.png" alt="html">
+            <img src="../Fotos/css.png" alt="css">
+            <img src="../Fotos/js.png" alt="js">
+        </div>
+
+        <div class="box">
+            <nav><a id="git" href="https://github.com/MuriloMayer/Portifolio" target="_blank">Site Pessoal</a></nav>
+            <p>Meu site pessoal (O qual vocês estam navegando) , foi um projeto pessoal porem incentivado na materia de Desenvolvimento De Carreira, Sendo Feito Utilizando HTML:5, CSS:3 E JavaScript </p>
+            <h3>Linguagens Utilizadas:</h3>
+            <img src="../Fotos/html.png" alt="html">
+            <img src="../Fotos/css.png" alt="css">
+            <img src="../Fotos/js.png" alt="js">
+        </div>
+
+        <div class="box">
+            <nav><a id="git" href="https://github.com/MuriloMayer/MaquinaDeRefrigeranteRA" target="_blank">Maquina De Refrigerantes V2</a></nav>
+            <p>A Maquina De Refrigerantes V2, Como o nome sugere é uma atualização do primeiro projeto de maquina de refrigerantes feito ao inicio da materia de Raciocínio Algorítmico, Sendo ele o projeto final da materia, tendo varias atualizações e otimizações em seu codigo.</p>
+            <h3>Linguagens Utilizadas:</h3>
+            <img src="../Fotos/python.png" alt="python">
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>Designed By Murilo Mayer</p>
+    </footer>
+
+
+    <script>
+        var didScroll;
+        var lastScrollTop = 1;
+        var delta = 1;
+        var navbarHeight = $('header').outerHeight();
+    
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+    
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+    
+        function hasScrolled() {
+
+            var st = $(this).scrollTop();  
+            if (st > lastScrollTop && st > navbarHeight){
+                $('header').removeClass('nav-down').addClass('nav-up');
+            } else {
+                if(st + $(window).height() < $(document).height()) {
+                    $('header').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+            lastScrollTop = st;
+        }   
+        </script>
+
+
+</body>
+</html>

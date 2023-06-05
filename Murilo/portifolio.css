@@ -4,14 +4,13 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
 body {
     background-color: #737272;
     color: white;
-    margin: 0;
     position: relative;
+    margin: 0;
 }
+
 
 header {
     background-color: rgba(0, 0, 0, 0.575);
@@ -23,13 +22,13 @@ header {
     left: 0;
     right: 0;
     transition: top 0.7s ease-out ;
-    width:100%;
-    height: 77px;
+    width: 100%;
 
 }
 .nav-up {
     top: -90px;
 }
+
 
 .nome {
     display: flex;
@@ -42,8 +41,18 @@ h1 {
     margin: 5px 0px -20px 0px;
     font-family: 'Encode Sans', sans-serif;
 }
+#home {
+    text-decoration: none;
+    color: white;
+    font-family: 'Encode Sans', sans-serif;
+}
 
-nav {
+#j {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+}
+
+header > nav {
     display: flex;
     align-items: center;
     margin-right: 50px;
@@ -69,100 +78,48 @@ nav {
     text-decoration: none;
 }
 
-#home {
-    text-decoration: none;
-    color: white;
-    font-family: 'Encode Sans', sans-serif; 
-}
-#j {
-    font-family: 'IBM Plex Sans', sans-serif;
-}
-
-h2, h3 {
-    font-family: 'Encode Sans', sans-serif;
-}
 
 main {
-    text-align: center;
-    margin-top: 150px;
-}
-.top {
-    margin-bottom: 60px;
-    font-family: 'Encode Sans', sans-serif;  
-}
-
-.main {
-    background-color:#404040;
     width: 60%;
     text-align: center;
-    margin: 0px auto;
-    border-radius: 10px;
+    margin: 150px auto ;
+
 }
 
-#p {
-    font-family: 'IBM Plex Sans', sans-serif;
-    text-align: left;
-    margin: 10px 15px 20px 15px;
-    font-size: 19px;
-}
-
-.sobre > #h2 {
-    margin-bottom: -5px;
-    text-decoration: underline;
-}
-
-
-.sobre {
-    margin: 40px;
-}
-
-#skill {
-    font-family: 'IBM Plex Sans', sans-serif;
-    text-align: center;
-    margin: 10px 15px 20px 15px;
-    font-size: 19px;
-}
-h3 {
-    margin-bottom: px;
-    margin-top: 30px;
-    text-decoration: underline;
-    font-size: 1.5em;
-}
-
-img { 
-    margin-left: 25px;
-    margin-bottom: 27px;
-}
-
-h4 {
+main > .box {
+    background-color: #404040;
     font-family: 'Encode Sans', sans-serif;
-    text-decoration: underline;
-    margin-bottom: -10px;
-    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    margin: auto auto 60px auto;
 }
 
-#dados > p {
+.top {
+    margin-bottom: 60px;
+    font-family: 'Encode Sans', sans-serif;    
+}
+.box > nav {
+    justify-content: center;
+    padding-top: 6px;
+}
+
+p {
     font-family: 'IBM Plex Sans', sans-serif;
-    margin: 20px;
-    font-size: 16px;
+    font-size: 19px;
 }
 
 
-nav > a{
-    display: flex;
-    position: sticky;
-    flex-direction: column;
-    align-items: center;
-    height: fit-content;
-    width: fit-content;
-    margin-top: 20px;
+#git {
     color: white;
+    position: sticky;
     text-decoration: none;
-    font-family: 'IBM Plex Sans', sans-serif;
-    margin: 20px auto 20px auto;
-}
+    background: rgba(255, 255, 255, 0);
+    font-size: 25px;
+    margin-top: 15px;
+  }
   
-nav > a::before {
+  nav > a::before {
     background: rgba(0, 0, 0, 0.404);
     content: "";
     inset: 0;
@@ -178,15 +135,22 @@ nav > a::before {
     transform: scaleX(1);
     transform-origin: left;
   }
+  
+.box > p {
+    margin: 20px;
+}
 
-  #c {
-    flex-direction: column;
-  }
+h3 {
+    font-size: 15px;
+}
+.box > img { 
+    height: 5%;
+    width: 5%;
+    margin: 10px;
+}
 
 footer {
     text-align: center;
     color: black;
     font-family: 'IBM Plex Sans', sans-serif;
 }
-
-
