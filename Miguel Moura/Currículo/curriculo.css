@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#cont_ext{
+    height: 100%vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+    background-color: #526D82;
+}
+
+.topico1, .topico2 {
+    background-color: white;
+    width: 850px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+p, h1{
+    margin-left: 10px;
+}
+
+#educacao, #exp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#contato{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#tel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+#email{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10px;
+    color: white;
+}
+
+#nomi{
+    margin-top: 100px;
+}
+#idioma{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 200px;
+}
+
+#h1_ing, #p_ava{
+    margin-left: 50px;
+}
+
+#botao{
+    margin: 30px;
+}
+
+
+

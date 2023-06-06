@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:ital,wght@1,200&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url(Fotos/compute-ea4c57a4.png);
     font-family: 'Bebas Neue', sans-serif;
@@ -18,7 +23,9 @@ header {
     text-shadow: 3px 4px 14px rgb(43, 33, 51);
 }
 
-
+div {
+    margin-bottom: 40px;
+}
 
 a {
     text-decoration: none;
@@ -44,11 +51,6 @@ a:hover {
 footer {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 12px;
-    padding-left: 20px;
-    text-align: left;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    text-align: center;
     color: white;
 }
